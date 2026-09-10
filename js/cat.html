@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="flex justify-center items-center h-screen bg-black">
+        <div flex flex-col gap-5>
+            <div>
+            <img id="bulb_img"src="https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png" alt=""class="w-[200px]">
+            <img id="cat_img"src="https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png" alt=""class="w-[200px]">
+        </div>
+        <div class="flex justify-between">
+            <button id="on_btn" class="bg bg-white text-black px-5 py-2 rounded-lg border border-black">on</button>
+            <button id="close_btn" class="bg bg-white text-black px-5 py-2 rounded-lg border border-black">off</button>
+        </div>
+    </div>
+</body>
+<script>
+    let bulb = document.getElementById('bulb_img')
+    let cat = document.getElementById('cat_img')
+    let on = document.getElementById('on_btn')
+    let off = document.getElementById('close_btn')
+
+    off.addEventListener('click', ()=>{
+        bulb.src = 'https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-off-img.png'
+        cat.src = 'https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-eyes-img.png'
+    })
+
+    on.addEventListener('click', ()=>{
+        bulb.src = 'https://ik.imagekit.io/4z8covdo9/Full%20stack/bulb-go-on-img.png'
+        cat.src = 'https://ik.imagekit.io/4z8covdo9/Full%20stack/cat-img.png'
+    })
+</script>
+</html>
